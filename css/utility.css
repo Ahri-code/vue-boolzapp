@@ -6,6 +6,10 @@
 
 .jc-between {justify-content: space-between;}
 
+.jc-evenly {justify-content: space-evenly;}
+
+.as-start {align-self: start;}
+
 .ai-center {align-items: center;}
 
 .fd-column {flex-direction: column;}

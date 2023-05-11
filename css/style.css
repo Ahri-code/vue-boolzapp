@@ -26,7 +26,7 @@
 }
 
 .header {
-    height: 65px;
+    min-height: 65px;
     padding: 0 1rem;
     background-color: #202c33;
 }
@@ -40,6 +40,7 @@
 
 .icon {
     font-size: 25px;
+    color: gray;
 }
 
 a {
@@ -53,7 +54,7 @@ a {
 }
 
 #notification {
-    height: 65px;
+    min-height: 65px;
     background-color: #8edafc;
     color: black;
 }
@@ -61,16 +62,17 @@ a {
 
 #bell {
     background-color: white;
-    color: #8edafc;
     height: 45px;
     width: 45px;
     border-radius: 50%;
 }
 
-.chats-height {height: 65px;}
+#bell i {
+    color: #8edafc;
+}
 
 #search-section {
-    height: 40px;
+    min-height: 40px;
 }
 
 #search-bar {
@@ -96,9 +98,62 @@ a {
     color: gray;
 }
 
+#chats-container {
+    height: calc(100% - 65px - 65px- 40px);
+    overflow-y: scroll;
+}
+
+#chats-container small {
+    color: gray;
+    font-size: 12px;
+}
+
+.chats {
+    height: 65px;
+    border-top: 1px solid #202c33;
+    border-bottom: 1px solid #202c33;
+}
+
 /* --- RIGHT SECTION --- */
 
 #sel-chat {
     width: calc(100% / 3 * 2);
     border-left: 1px solid gray;
+}
+
+#chat-header small {
+    color: gray;
+    font-size: 12px;
+}
+
+#chat-show {
+    height: calc(100% - 65px - 65px);
+    background-image: url(../img/mine.jpg);
+    filter: invert(1);
+}
+
+#chat-send {
+    min-height: 65px;
+    background-color: #202c33;
+    color: white;
+}
+
+#chat-send button {
+    font-size: 20px;
+    border: 0;
+    background-color: #202c33;
+    color: gray;
+}
+
+#chat-send input {
+    width: 80%;
+    height: 40px;
+    border: 0;
+    background-color: #2a3942;
+    color: gray;
+    border-radius: 10px;
+}
+
+.test {
+    background-color: aqua;
 }
