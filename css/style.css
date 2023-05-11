@@ -132,6 +132,21 @@ a {
     filter: invert(1);
 }
 
+.message-display {
+    max-width: 45%;
+    filter: invert(1);
+    border-radius: 5px;
+}
+
+.message-sent {background-color: #005c4b;}
+
+.message-receved {background-color: #202c33;}
+
+#chat-show small {
+    font-size: 8px;
+    color: gray;
+}
+
 #chat-send {
     min-height: 65px;
     background-color: #202c33;
@@ -152,8 +167,4 @@ a {
     background-color: #2a3942;
     color: gray;
     border-radius: 10px;
-}
-
-.test {
-    background-color: aqua;
 }
