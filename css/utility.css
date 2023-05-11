@@ -16,6 +16,10 @@
 
 /* --- PADDING --- */
 
+.p-0-1 {padding: 0 1rem;}
+
+/* Padding-left */
+
 .pl-05 {padding-left: 0.5rem;}
 
 .pl-1 {padding-left: 1rem;}

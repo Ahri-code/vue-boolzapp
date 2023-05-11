@@ -15,6 +15,7 @@
         <div id="app" class="flex">
             <!-- Chat List -->
             <div id="chat-list" class="flex fd-column">
+                <!-- Header -->
                 <div class="header flex ai-center jc-between">
                     <!-- Left side -->
                     <div class="flex ai-center">   
@@ -25,9 +26,32 @@
                     </div>
                     <!-- Right side -->
                     <div class="flex ai-center">
-                        <i class="fa-solid fa-circle-notch pl-1"></i>
-                        <i class="fa-solid fa-message pl-1"></i>
-                        <i class="fa-solid fa-ellipsis-vertical pl-1"></i>
+                        <i class="fa-solid fa-circle-notch pl-1 icon"></i>
+                        <i class="fa-solid fa-message pl-1 icon"></i>
+                        <i class="fa-solid fa-ellipsis-vertical pl-1 icon"></i>
+                    </div>
+                </div>
+                <!-- App notification -->
+                <div id="notification" class="flex ai-center p-0-1">
+                    <div class="flex jc-center ai-center" id="bell">
+                        <i class="fa-solid fa-bell-slash icon"></i>
+                    </div>
+                    <div class="pl-1">
+                        <p>
+                            Ricevi notifiche di nuovi messaggi
+                        </p>
+                        <a href="#">
+                            <small>
+                                Attiva notifiche desktop
+                            </small>
+                        </a>
+                    </div>
+                </div>
+                <!-- Search -->
+                <div id="search-section" class="flex jc-center ai-center">
+                    <div id="search-bar" class="flex ai-center p-0-1">
+                        <button class="fa-solid fa-magnifying-glass"></button>
+                        <input type="text" name="search-result" id="search-input" placeholder="Cerca o inizia una nuova chat">
                     </div>
                 </div>
             </div>
