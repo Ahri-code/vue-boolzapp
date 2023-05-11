@@ -4,8 +4,18 @@
 
 .jc-center {justify-content: center;}
 
+.jc-between {justify-content: space-between;}
+
 .ai-center {align-items: center;}
+
+.fd-column {flex-direction: column;}
 
 /* --- COLOR--- */
 
 .c-white {color: white;}
+
+/* --- PADDING --- */
+
+.pl-05 {padding-left: 0.5rem;}
+
+.pl-1 {padding-left: 1rem;}
