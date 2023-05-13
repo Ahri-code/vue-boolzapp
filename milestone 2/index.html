@@ -56,7 +56,7 @@
                 </div>
                 <!-- Chats -->
                 <div id="chats-container" class="p-0-1">
-                    <div v-for="chat in contacts" class="chats flex jc-between ai-center">
+                    <div v-for="(chat, i) in contacts" class="chats flex jc-between ai-center" @click="chatButton(i)">
                         <div class="flex ai-center">
                             <img :src="chat.avatar" class="std-img">
                             <div class="pl-1 as-start">
@@ -88,10 +88,10 @@
                     <!-- Left side -->
                     <div class="flex ai-center jc-between">
                         <div class="flex ai-center">
-                            <img src="./img/avatar_1.jpg" class="std-img">
+                            <img :src="contacts[number].avatar" class="std-img">
                             <div class="pl-05 as-start">    
                                 <p>
-                                    Michele
+                                    {{contacts[number].name}}
                                 </p>
                                 <p>
                                     <small>
@@ -110,35 +110,13 @@
                 </div>
                 <!-- Center -->
                 <div id="chat-show">
-                    <div class="message-row flex ai-center js-end p-1">
-                        <div class="message-display message-sent flex ai-center p-05">
+                    <div v-for="text in contacts[number].messages" class="message-row flex ai-center p-1" :class="(text.status == 'sent')? 'js-end' : 'js-start'">
+                        <div class="message-display flex ai-center p-05" :class="(text.status == 'sent')? 'message-sent' : 'message-receved'">
                             <p>
-                                test
+                                {{text.message}}
                             </p>
                             <p class="js-end as-end pl-05">
-                                <small>12:00</small>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="message-row flex ai-center js-end p-0-1">
-                        <div class="message-display message-sent flex ai-center p-05">
-                            <p>
-                                test mooooooooooooooooooooooooooooooolto lungo
-                            </p>
-                            <p class="js-end as-end pl-05">
-                                <small>12:00</small>
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="message-row flex ai-center p-0-1">
-                        <div class="message-display message-receved flex ai-center p-05">
-                            <p>
-                                test
-                            </p>
-                            <p class="js-end as-end pl-05">
-                                <small>12:00</small>
+                                <small>{{text.date.split(' ')[1].slice(0, 5)}}</small>
                             </p>
                         </div>
                     </div>

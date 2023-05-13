@@ -100,7 +100,7 @@ a {
 
 #chats-container {
     height: calc(100% - 65px - 65px- 40px);
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 #chats-container small {
