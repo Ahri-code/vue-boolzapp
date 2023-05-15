@@ -39,7 +39,7 @@
 }
 
 .icon {
-    font-size: 25px;
+    font-size: 20px;
     color: gray;
 }
 
@@ -172,4 +172,17 @@ a {
     background-color: #2a3942;
     color: gray;
     border-radius: 10px;
+}
+
+#send-message {
+    border: 0;
+    background-color: #2a3942;
+    resize: none;
+    overflow: hidden;
+    color: gray;
+    width: 80%;
+    height: 40px;
+    border-radius: 10px;
+    line-height: 20px;
+    padding: 10px 1rem;
 }

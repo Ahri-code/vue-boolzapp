@@ -126,7 +126,7 @@
                 <!-- Bottom -->
                 <div id="chat-send" class="flex ai-center jc-evenly">
                     <button class="fa-regular fa-face-smile icon"></button>
-                    <input v-model="text" class="p-0-1" name="message-sender" id="send-message" placeholder="Scrivi un messaggio">
+                    <textarea v-model="text" class="p-0-1" name="message-sender" id="send-message" placeholder="Scrivi un messaggio"></textarea>
                     <button v-if="text == ''" class="fa-solid fa-microphone"></button>
                     <button v-else class="fa-solid fa-paper-plane" @click="send"></button>
                 </div>
