@@ -167,7 +167,8 @@ createApp ({
                 }
             ],
             number: 0,
-            text: ''
+            text: '',
+            response: 'ok'
         }
     },
     methods: {
@@ -175,8 +176,12 @@ createApp ({
             this.number = counter;
         },
         send() {
-            this.contacts[this.number].messages.push({date: moment().format('DD/MM/YYYY, H:mm:ss'), message: this.text, status: 'sent'})
+            this.contacts[this.number].messages.push({date: moment().format('DD/MM/YYYY, H:mm:ss'), message: this.text, status: 'sent'});
             this.text = '';
+            let self = this;
+            setTimeout(function(){
+                self.contacts[self.number].messages.push({date: moment().format('DD/MM/YYYY, H:mm:ss'), message: self.response, status: 'recceived'});
+            }, 1000);
         }
     }
 }).mount('#app')
