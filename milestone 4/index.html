@@ -53,12 +53,12 @@
                 <div id="search-section" class="flex jc-center ai-center">
                     <div id="search-bar" class="flex ai-center p-0-1">
                         <button class="fa-solid fa-magnifying-glass"></button>
-                        <input v-model="search" name="search-result" id="search-input" placeholder="Cerca o inizia una nuova chat" @click="filter">
+                        <input v-model="search" name="search-result" id="search-input" placeholder="Cerca o inizia una nuova chat" @change="filter">
                     </div>
                 </div>
                 <!-- Chats -->
                 <div id="chats-container" class="p-0-1">
-                    <div v-for="(chat, i) in contacts" class="chats flex jc-between ai-center" @click="chatButton(i)" :class="(i == this.number) ? 'active' : ''">
+                    <div v-for="(chat, i) in contacts" class="chats flex jc-between ai-center" @click="chatButton(i)" :class="(i == this.number) ? 'active' : '', (contacts.visible == false) ? 'remove' : ''">
                         <div class="flex ai-center">
                             <img :src="chat.avatar" class="std-img">
                             <div class="pl-1 as-start">

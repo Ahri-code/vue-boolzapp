@@ -185,11 +185,11 @@ createApp ({
             }, 1000);
         },
         filter() {
-            if(!this.name.includes(this.search)) {
-                console.log(this.contacts.visible);
-                this.contacts.visible = false;
-                console.log(this.contacts.visible);
-            }
+            this.contacts.forEach(name => {
+            });
+                // if(this.contacts.name.includes(this.search)) {
+                //     this.contacts.visible = false;
+                // }
         }
     }
 }).mount('#app')
